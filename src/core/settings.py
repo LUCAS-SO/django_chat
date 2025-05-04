@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +43,17 @@ INSTALLED_APPS = [
 
     'chat',
 ]
+
+ASGI_APPLICATION = 'core.asgi.application'
+
+# Configuracion de los canales
+# Simplemente para pruebas, no para producción
+# https://channels.readthedocs.io/en/stable/topics/channel_layers.html#in-memory-channel-layer
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
