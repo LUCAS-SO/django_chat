@@ -11,14 +11,14 @@ Proyecto de chat en tiempo real con Django y Channels, usando WebSockets para co
 
 🗂️ Estructura básica
 
-core/
-├─ asgi.py        Configuración ASGI y Channels
-├─ settings.py    INSTALLED_APPS y CHANNEL_LAYERS
-└─ urls.py        Rutas principales (admin/, chat/)
+core/</br>
+├─ asgi.py        Configuración ASGI y Channels</br>
+├─ settings.py    INSTALLED_APPS y CHANNEL_LAYERS</br>
+└─ urls.py        Rutas principales (admin/, chat/)</br>
 
-chat/
-├─ consumers.py   Lógica de WebSocket
-├─ routing.py     websocket_urlpatterns
-├─ views.py       Vista del lobby
-└─ templates/chat/
+chat/</br>
+├─ consumers.py   Lógica de WebSocket</br>
+├─ routing.py     websocket_urlpatterns</br>
+├─ views.py       Vista del lobby</br>
+└─ templates/chat/</br>
    └─ lobby.html   Interfaz y script JS
